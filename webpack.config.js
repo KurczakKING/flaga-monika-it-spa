@@ -13,4 +13,26 @@ module.exports = {
     },
     port: 9000,
   },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        type: "asset/resource",
+      },
+    ],
+  },
 };
