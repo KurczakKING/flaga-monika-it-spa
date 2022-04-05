@@ -1,12 +1,12 @@
 import { style } from "./css/index.scss";
 import "bootstrap";
 import { Home } from "./views/Home";
+import { RoomsList } from "./views/RoomsList";
 import { Nav } from "./navigation/Nav";
-//import { RoomList } from "./views/RoomsList";
 
-let $ = require("jquery");
+/*let $ = require("jquery");
 window.jQuery = $;
-window.$ = $;
+window.$ = $;*/
 
 const main = document.querySelector("main");
 main.before(Nav());

@@ -64,6 +64,11 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         type: "asset/resource",
       },
+      /*{
+        test: /\.json$/,
+        exclude: /(node_modules)/,
+        use: "json-loader",
+      },*/
     ],
   },
 };

@@ -1,13 +1,13 @@
 //import { Button } from "bootstrap";
 import { Home } from "../views/Home";
 import { Button } from "../common/Button";
-//import { RoomList } from "../views/RoomsList";
+import { RoomsList } from "../views/RoomsList";
 //import { TreatmentsList } from "../views/TreatmentsList";
 //import { Cart } from "../views/Cart";
 
 const navItems = [
   { name: "Home", component: Home },
-  { name: "Rooms"/*, component: RoomsList */},
+  { name: "Rooms", component: RoomsList },
   { name: "Treatments"/*, component: TreatmentsList */},
   { name: "🛒"/*, component: Cart */},
 ];
@@ -31,7 +31,7 @@ export function Nav() {
           detail: item.component,
         });
 
-        document.body.dispatchEvent(CustomEvent);
+        document.body.dispatchEvent(customEvent);
       },
     });
   });
